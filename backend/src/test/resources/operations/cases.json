@@ -1,0 +1,45 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "priceScore": "#100",
+      "serviceWeight": "#20",
+      "totalScore": "#92"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "technical": "50"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "priceWeight": "80"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "bidPrice": "200"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "totalScore": "#72"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "bidPrice": "0"
+    },
+    "expected": {},
+    "error": true
+  }
+]

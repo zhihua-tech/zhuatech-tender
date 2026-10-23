@@ -1,0 +1,93 @@
+{
+  "slug": "tender",
+  "title": "价格基准与综合评分透明试算",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "bidPrice",
+      "label": "投标价格",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "benchmark",
+      "label": "价格基准",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "technical",
+      "label": "技术分",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "key": "service",
+      "label": "服务分",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "key": "priceWeight",
+      "label": "价格权重%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "key": "technicalWeight",
+      "label": "技术权重%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "priceScore",
+      "label": "价格分"
+    },
+    {
+      "key": "serviceWeight",
+      "label": "服务权重%"
+    },
+    {
+      "key": "totalScore",
+      "label": "综合分"
+    }
+  ],
+  "description": "按输入基准价格、技术与服务评分、权重计算分项贡献，避免只显示不可解释的总分。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "bidPrice": "100",
+        "benchmark": "100",
+        "technical": "90",
+        "service": "80",
+        "priceWeight": "40",
+        "technicalWeight": "40"
+      }
+    ]
+  }
+}
